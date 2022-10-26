@@ -18,6 +18,7 @@ Server::~Server()
 
 void	Server::start()
 {
+	//poll init
 	pollfd	server_fd = {this->sock, POLLIN | POLLHUP, 0};
 	poll_fds.push_back(server_fd);
 
